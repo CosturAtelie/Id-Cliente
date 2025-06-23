@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Área do Cliente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,6 +12,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
     .login-box {
       background: white;
@@ -43,23 +45,31 @@
     <h2>Área do Cliente</h2>
     <input type="text" id="cliente" placeholder="Digite seu nome ou ID" />
     <br>
-    <button onclick="acessar()">Entrar</button>
+    <button id="entrarBtn">Entrar</button>
   </div>
 
   <script>
-    function acessar() {
-      const nome = document.getElementById('cliente').value.toLowerCase().trim();
-      const links = {
-        ihally: "https://app.jotform.com/costur/costur-atelie/page/90",
-        cicero: "https://app.jotform.com/costur/costur-atelie/page/112"
-      };
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('entrarBtn').addEventListener('click', function () {
+        const nome = document.getElementById('cliente').value.toLowerCase().trim();
+        const links = {
+         15012024: "https://app.jotform.com/costur/costur-atelie/page/90",
+        25032024: "https://app.jotform.com/costur/costur-atelie/page/112"
+	      09012024: "https://app.jotform.com/costur/costur-atelie/page/113"
+	      10062024: "https://app.jotform.com/costur/costur-atelie/page/114"
+	      02012025: "https://app.jotform.com/costur/costur-atelie/page/196"
+	      21062025: "https://app.jotform.com/costur/costur-atelie/page/137"
+	      23062025: "https://app.jotform.com/costur/costur-atelie/page/138"
 
-      if (links[nome]) {
-        window.location.href = links[nome];
-      } else {
-        alert("Cliente não encontrado. Verifique o nome digitado.");
-      }
-    }
+        };
+
+        if (links[nome]) {
+          window.location.href = links[nome];
+        } else {
+          alert("Cliente não encontrado. Verifique o nome digitado.");
+        }
+      });
+    });
   </script>
 </body>
 </html>
