@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Área do Cliente</title>
+  <title>Id Cliente</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -53,12 +53,13 @@
       document.getElementById('entrarBtn').addEventListener('click', function () {
         const nome = document.getElementById('cliente').value.toLowerCase().trim();
         const links = {
-      		15012024: "https://app.jotform.com/costur/costur-atelie/page/90",
-       		25032024: "https://app.jotform.com/costur/costur-atelie/page/112"
-	      09012024: "https://app.jotform.com/costur/costur-atelie/page/113"
-	      10062024: "https://app.jotform.com/costur/costur-atelie/page/114"
-	      02012025: "https://app.jotform.com/costur/costur-atelie/page/196"
-	      21062025: "https://app.jotform.com/costur/costur-atelie/page/137"
+      		
+		15012024: "https://app.jotform.com/costur/costur-atelie/page/90",
+       		25032024: "https://app.jotform.com/costur/costur-atelie/page/112",
+	      09012024: "https://app.jotform.com/costur/costur-atelie/page/113",
+	      10062024: "https://app.jotform.com/costur/costur-atelie/page/114",
+	      02012025: "https://app.jotform.com/costur/costur-atelie/page/196",
+	      21062025: "https://app.jotform.com/costur/costur-atelie/page/137",
 	      23062025: "https://app.jotform.com/costur/costur-atelie/page/138"
 
         };
@@ -66,7 +67,7 @@
         if (links[nome]) {
           window.location.href = links[nome];
         } else {
-          alert("Cliente não encontrado. Verifique o nome digitado.");
+          alert("ID não encontrado. Verifique e digite novamente.");
         }
       });
     });
