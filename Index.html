@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Área do Cliente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #b3e5fc;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #81d4fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Área do Cliente</h2>
+    <input type="text" id="cliente" placeholder="Digite seu nome ou ID" />
+    <br>
+    <button onclick="acessar()">Entrar</button>
+  </div>
+
+  <script>
+    function acessar() {
+      const nome = document.getElementById('cliente').value.toLowerCase();
+      const links = {
+        15012024: "https://app.jotform.com/costur/costur-atelie/page/90",
+        25032024: "https://app.jotform.com/costur/costur-atelie/page/112"
+	09012024: "https://app.jotform.com/costur/costur-atelie/page/113"
+	10062024: "https://app.jotform.com/costur/costur-atelie/page/114"
+	02012025: "https://app.jotform.com/costur/costur-atelie/page/196"
+	21062025: "https://app.jotform.com/costur/costur-atelie/page/137"
+	23062025: "https://app.jotform.com/costur/costur-atelie/page/138"
+
+        // Você pode adicionar mais clientes assim:
+        // maria: "https://link.com/cliente/maria",
+      };
+
+      if (links[nome]) {
+        window.location.href = links[nome];
+      } else {
+        alert("Cliente não encontrado. Verifique o nome digitado.");
+      }
+    }
+  </script>
+</body>
+</html>
